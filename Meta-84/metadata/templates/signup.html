@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+  </head>
+  
+  <body>
+    <div>
+        <style>h5{color:blue}
+            </style>
+        {% for message in messages %}
+        <h5>{{message}}</h5>
+        {% endfor %}
+    </div>
+    
+
+    <form action="" method="POST"  {% csrf_token %}>
+  
+      <div>
+        <h3>Sign Up</h3>
+        <label for="Email">Email</label>
+        <input type="email" name="Email" placeholder="Email" /><br />
+        <label for="Username">Username</label>
+        <input type="text" name="Username" placeholder="Username" /><br />
+        <label for="Password">Password</label>
+        <input
+          type="password"
+          name="Password"
+          placeholder="Password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        /><br />
+        <label for="Confirm Password">Confirm Password</label>
+        <input
+          type="password2"
+          name="password2"
+          placeholder="Confirm password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        /><br />
+    </form>
+
+        <input type="checkbox" id="checkbox" name="checkbox" value="checked" />
+        <label for="checkbox">I Agree to your Terms and Conditions</label>
+
+        <div>
+          <button
+            style="background-color: rgb(189, 184, 184); color: rgb(22, 22, 22)"
+          >
+            Sign Up
+          </button>
+        </div>
+        <div>
+          <h4>Do you have an account?</h4>
+          <a href="#">Login</a>
+        </div>
+      </div>
+   
+
+  </body>
+  
+  <footer>&copy; Copyright 2022 by 14GxZuri </footer>
+</html>
+
